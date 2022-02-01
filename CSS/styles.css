@@ -1,0 +1,45 @@
+/* основной цвет текста #212121 */
+/* второстепенный цвет текста #757575 */
+/* цвет акцента, части лого #2196F3 */
+/* цвет заголовка Н1, текста в кнопке, части лого, физ.адреса #FFFFFF */
+/* цвет imail и телефона в footer rgba(255, 255, 255, 0,6) */
+/* цвет фона footer #2F303A */
+/* цвет фона секции our team #F5F4FA */
+/* цвет полоски в head #ECECEC */
+/* цвет части лого #000000 */
+body {
+  background-color: #ffffff;
+  color: #757575;
+}
+.list {
+  list-style: none;
+}
+/* site nav */
+.logo {
+  color: #000000;
+}
+.logo-web {
+  color: #2196f3;
+}
+.site-nav a {
+  color: #212121;
+}
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #2196f3;
+}
+.contacts a {
+  color: #757575;
+}
+/* contacts in header */
+.contacts a:hover,
+.contacts a:focus {
+  color: #2196f3;
+}
+/* hero section */
+.hero-title {
+  color: #ffffff;
+}
+.section-title {
+  color: #212121;
+}
