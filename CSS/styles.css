@@ -150,10 +150,15 @@ body {
 .footer-contacts .link-map {
   color: var(--primary-bg-color);
 }
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+  color: var(--accent-color);
+}
 /* PORTFOLIO PAGE */
 .botton-filter {
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
+  font-family: inherit;
 }
 .botton-filter:hover,
 .botton-filter:focus {
