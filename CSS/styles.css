@@ -1,20 +1,20 @@
-/* основной цвет текста #212121 */
-/* второстепенный цвет текста #757575 */
-/* цвет акцента, части лого #2196F3 */
-/* цвет заголовка Н1, текста в кнопке, части лого, физ.адреса #FFFFFF */
-/* цвет imail и телефона в footer rgba(255, 255, 255, 0,6) */
-/* цвет фона footer #2F303A */
-/* цвет фона секции our team #F5F4FA */
-/* цвет полоски в head #ECECEC */
-/* цвет части лого #000000 */
 :root {
   --primary-text-color: #757575;
-  --title-text-color: #212121;
-  --footer-text-color: rgba(255, 255, 255, 0, 6);
-  --accent-color: #2196f3;
+  --secondary-text-color: #212121;
+  --footer-text-color: rgba(255, 255, 255, 0.6);
+  --primary-accent-color: #2196f3;
+  --footer-logo-text-color: #000000;
+  --secondary-accent-color: #ffffff;
+  --bg-hover-btn-color: #188ce8;
   --primary-bg-color: #ffffff;
   --secondary-bg-color: #f5f4fa;
-  --footer-bg-color: #2f303a;
+  --footer-and-header-bg-color: #2f303a;
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
 }
 body {
   background-color: var(--primary-bg-color);
@@ -23,15 +23,9 @@ body {
   font-family: roboto, sans-serif;
   letter-spacing: 0.03em;
 }
-.list {
-  list-style: none;
-}
-.link {
-  text-decoration: none;
-}
-/* site nav */
+/* ======start site nav======= */
 .logo {
-  color: #000000;
+  color: var(--footer-logo-text-color);
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -39,21 +33,26 @@ body {
   line-height: 1.19;
 }
 .logo-web {
-  color: #2196f3;
+  color: var(--primary-accent-color);
 }
-.site-nav a {
-  color: var(--title-text-color);
+.site-nav-list .link.current {
+  color: var(--primary-accent-color);
+}
+.site-nav-list a {
+  color: var(--secondary-text-color);
 
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.site-nav a:hover,
-.site-nav a:focus {
-  color: var(--accent-color);
+.site-nav-list a:hover,
+.site-nav-list a:focus,
+.contacts-list a:hover,
+.contacts-list a:focus {
+  color: var(--primary-accent-color);
 }
-.contacts a {
+.contacts-list a {
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -61,17 +60,13 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-/* contacts in header */
-.contacts a:hover,
-.contacts a:focus {
-  color: var(--accent-color);
-}
-/* hero section */
+/* ========end site nav====== */
+/* =======start hero section====== */
 .hero {
-  background-color: var(--footer-bg-color);
+  background-color: var(--footer-and-header-bg-color);
 }
 .hero-title {
-  color: #ffffff;
+  color: var(--secondary-accent-color);
 
   font-weight: 900;
   font-size: 44px;
@@ -80,10 +75,11 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.button {
+.modal-btn {
   color: var(--primary-bg-color);
-  background-color: var(--accent-color);
+  background-color: var(--primary-accent-color);
 
+  cursor: pointer;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -92,21 +88,23 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
 }
-.button:hover {
-  background-color: #188ce8;
+.modal-btn:hover {
+  background-color: var(--bg-hover-btn-color);
 }
-/* sections */
+/* ========and hero section======== */
+/* =======start covponents========= */
 .section-title {
-  color: var(--title-text-color);
+  color: var(--secondary-text-color);
 
   font-weight: 700;
   font-size: 36px;
   line-height: 1.2;
   text-align: center;
 }
-/* feature section */
+/* =========end components========= */
+/* ========start features section====== */
 .feature-list .title {
-  color: var(--title-text-color);
+  color: var(--secondary-text-color);
 
   font-weight: 700;
   font-size: 14px;
@@ -117,24 +115,32 @@ body {
   font-size: 14px;
   line-height: 1.7;
 }
-/* our team section */
+/* ======and features section====== */
+/* ======start our team section==== */
+.our-team-section {
+  background-color: var(--secondary-bg-color);
+}
+.team-list-item {
+  background-color: var(--primary-bg-color);
+}
 .team-title {
-  color: var(--title-text-color);
+  color: var(--secondary-text-color);
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
 }
-.team .position {
+.team-list .position {
   font-size: 16px;
   line-height: 1.2;
 }
-/* footer section */
+/* =======and our team section===== */
+/* =======start footer section====== */
 .footer {
-  background-color: var(--footer-bg-color);
+  background-color: var(--footer-and-header-bg-color);
 }
 .logo-footer {
-  color: var(--primary-bg-color);
+  color: var(--secondary-accent-color);
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -152,16 +158,30 @@ body {
 }
 .footer-contacts a:hover,
 .footer-contacts a:focus {
-  color: var(--accent-color);
+  color: var(--primary-accent-color);
 }
-/* PORTFOLIO PAGE */
-.botton-filter {
-  color: var(--title-text-color);
+/* ========PORTFOLIO PAGE======= */
+.filter-btn {
+  color: var(--secondary-text-color);
   background-color: var(--secondary-bg-color);
   font-family: inherit;
 }
-.botton-filter:hover,
-.botton-filter:focus {
+.filter-btn:hover,
+.filter-btn:focus {
   color: var(--primary-bg-color);
-  background-color: var(--accent-color);
+  background-color: var(--bg-hover-btn-color);
+}
+.product-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--secondary-text-color);
+}
+.products-list p {
+  font-size: 16px;
+  line-height: 1.9;
+
+  color: var(--primary-text-color);
 }
