@@ -16,6 +16,9 @@
 .link {
   text-decoration: none;
 }
+address {
+  font-style: normal;
+}
 body {
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
