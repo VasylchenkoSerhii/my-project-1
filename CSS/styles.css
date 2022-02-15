@@ -54,23 +54,43 @@ body {
 }
 /* =======start covponents========= */
 .section-title {
-  color: var(--secondary-text-color);
+  margin-bottom: 50px;
 
   font-weight: 700;
   font-size: 36px;
   line-height: 1.2;
   text-align: center;
+
+  color: var(--secondary-text-color);
 }
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.title,
+.team-title {
+  margin-bottom: 10px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* =========end components========= */
 /* ======start site nav======= */
+.header {
+  border-bottom: 1px solid #ececec;
+}
 .nav-box {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .site-nav {
   display: flex;
@@ -81,15 +101,13 @@ body {
   align-items: center;
 }
 .logo {
-  color: var(--footer-logo-text-color);
-
-  padding-top: 24px;
-  padding-bottom: 24px;
   margin-right: 94px;
+
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  color: var(--footer-logo-text-color);
 }
 .logo-web {
   color: var(--primary-accent-color);
@@ -101,14 +119,15 @@ body {
   color: var(--primary-accent-color);
 }
 .site-nav-list a {
-  color: var(--secondary-text-color);
-
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
 }
 .site-nav-list a:hover,
 .site-nav-list a:focus,
@@ -119,52 +138,51 @@ body {
 .contacts-list {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 .contacts-list-item:not(:last-child) {
   margin-right: 50px;
 }
 .contacts-list a {
-  color: var(--primary-text-color);
-
   padding-top: 32px;
   padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--primary-text-color);
 }
 /* ========end site nav====== */
 /* =======start hero section====== */
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
+
+  text-align: center;
   background-color: var(--footer-and-header-bg-color);
 }
 .hero-title {
-  color: var(--secondary-accent-color);
-
+  width: 696px;
   margin-left: auto;
   margin-right: auto;
-  width: 696px;
   margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--secondary-accent-color);
 }
 .modal-btn {
-  color: var(--primary-bg-color);
-  background-color: var(--primary-accent-color);
-
-  margin-left: auto;
-  margin-right: auto;
   min-width: 200px;
   padding: 10px 25px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -172,6 +190,8 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  color: var(--primary-bg-color);
+  background-color: var(--primary-accent-color);
 }
 .modal-btn:hover {
   background-color: var(--bg-hover-btn-color);
@@ -181,61 +201,95 @@ body {
 .feature-list {
   display: flex;
   flex-wrap: wrap;
-  /* padding-left: -30px; */
+  margin-left: -30px;
+  margin-top: -30px;
 }
 .feature-list-item {
   flex-basis: calc((100% - 120px) / 4);
-  padding-left: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 .feature-list .title {
-  color: var(--secondary-text-color);
-
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1;
   text-transform: uppercase;
+  color: var(--secondary-text-color);
 }
 .feature-list .text {
   font-size: 14px;
   line-height: 1.7;
 }
 /* ======and features section====== */
-/* ======start our team section==== */
+/* ======start our work section==== */
+.our-work-section {
+  padding-top: 0px;
+}
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.work-list-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.work-list-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+/* =====and out work section======= */
+/* ======start our team section====== */
 .our-team-section {
   background-color: var(--secondary-bg-color);
 }
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
 .team-list-item {
-  background-color: var(--primary-bg-color);
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 120px) / 4);
 }
 .team-title {
-  color: var(--secondary-text-color);
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
+  text-align: center;
+  color: var(--secondary-text-color);
 }
 .team-list .position {
   font-size: 16px;
   line-height: 1.2;
+  text-align: center;
+}
+.content-card-team {
+  padding: 30px;
+  border-radius: 0 0 4px 4px;
+  background-color: var(--primary-bg-color);
 }
 /* =======and our team section===== */
 /* =======start footer section====== */
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background-color: var(--footer-and-header-bg-color);
 }
 .logo-footer {
-  color: var(--secondary-accent-color);
+  display: inline-block;
+  margin-bottom: 20px;
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  color: var(--secondary-accent-color);
 }
 .footer-contacts a {
-  color: var(--footer-text-color);
-
   font-size: 14px;
   line-height: 1.7;
+  color: var(--footer-text-color);
 }
 .footer-contacts .link-map {
   color: var(--primary-bg-color);
@@ -244,28 +298,61 @@ body {
 .footer-contacts a:focus {
   color: var(--primary-accent-color);
 }
+.footer-contacts-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 /* ========PORTFOLIO PAGE======= */
+.portfolio-section {
+  padding-top: 130px;
+  padding-bottom: 94px;
+}
+.filters-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+.filters-list-item:not(:last-child) {
+  margin-right: 8px;
+}
 .filter-btn {
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: none;
+
+  font-family: inherit;
   color: var(--secondary-text-color);
   background-color: var(--secondary-bg-color);
-  font-family: inherit;
 }
 .filter-btn:hover,
 .filter-btn:focus {
   color: var(--primary-bg-color);
   background-color: var(--bg-hover-btn-color);
 }
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.products-list-item {
+  box-sizing: calc((100% - 90px) / 3);
+  margin-left: 30px;
+  margin-top: 30px;
+}
 .product-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-
   color: var(--secondary-text-color);
 }
 .products-list p {
   font-size: 16px;
   line-height: 1.9;
-
   color: var(--primary-text-color);
+}
+.content-products-list {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
