@@ -155,6 +155,21 @@ body {
 }
 /* ========end site nav====== */
 /* =======start hero section====== */
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/decor/bg-img-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -267,6 +282,8 @@ body {
   padding: 30px;
   border-radius: 0 0 4px 4px;
   background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 /* =======and our team section===== */
 /* =======start footer section====== */
@@ -327,6 +344,8 @@ body {
 .filter-btn:focus {
   color: var(--primary-bg-color);
   background-color: var(--bg-hover-btn-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .products-list {
   display: flex;
@@ -334,8 +353,17 @@ body {
   margin-left: -30px;
   margin-top: -30px;
 }
+.products-list .link {
+  display: block;
+}
+.products-list .link:hover,
+.products-list .link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .products-list-item {
-  box-sizing: calc((100% - 90px) / 3);
+  /* flex-basis: calc((100% - 90px) / 3); */
+  flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
 }
@@ -352,7 +380,7 @@ body {
   color: var(--primary-text-color);
 }
 .content-products-list {
-  padding: 20px 24px;
+  padding: 20px 22px;
   border: 1px solid #eeeeee;
   border-top: none;
 }
