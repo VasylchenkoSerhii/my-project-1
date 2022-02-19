@@ -83,6 +83,33 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.social-team-list {
+  display: flex;
+  justify-content: space-between;
+}
+.social-team-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social-footer {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-team-link:hover,
+.social-team-link:focus {
+  background-color: var(--primary-accent-color);
+}
+.social-team-link:hover .social-list-icon,
+.social-team-link:focus .social-list-icon {
+  fill: var(--secondary-accent-color);
+}
+.social-list-icon {
+  fill: #afb1b8;
+}
 /* =========end components========= */
 /* ======start site nav======= */
 .header {
@@ -131,9 +158,18 @@ body {
 }
 .site-nav-list a:hover,
 .site-nav-list a:focus,
-.contacts-list a:hover,
-.contacts-list a:focus {
+.nav-contacts-link:hover,
+.nav-contacts-link:focus {
   color: var(--primary-accent-color);
+  fill: var(--primary-accent-color);
+}
+.nav-contacts-link {
+  display: flex;
+  align-items: center;
+}
+.icon-contacts {
+  margin-right: 10px;
+  fill: currentColor;
 }
 .contacts-list {
   display: flex;
@@ -213,6 +249,15 @@ body {
 }
 /* ========and hero section======== */
 /* ========start features section====== */
+.feature-decor {
+  display: flex;
+  align-items: center;
+  max-width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
 .feature-list {
   display: flex;
   flex-wrap: wrap;
@@ -220,7 +265,7 @@ body {
   margin-top: -30px;
 }
 .feature-list-item {
-  flex-basis: calc((100% - 120px) / 4);
+  flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
   margin-top: 30px;
 }
@@ -265,6 +310,9 @@ body {
   margin-left: 30px;
   margin-top: 30px;
   flex-basis: calc((100% - 120px) / 4);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team-title {
   font-weight: 500;
@@ -273,25 +321,66 @@ body {
   text-align: center;
   color: var(--secondary-text-color);
 }
+.position {
+  margin-bottom: 16px;
+}
 .team-list .position {
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
 }
 .content-card-team {
-  padding: 30px;
+  padding: 30px 32px;
   border-radius: 0 0 4px 4px;
   background-color: var(--primary-bg-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 /* =======and our team section===== */
+/* ========start clients section======= */
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-top: -30px;
+}
+.clients-list-item {
+  margin-right: 30px;
+  margin-top: 30px;
+  flex-basis: calc(100% / 6 - 30px);
+}
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.clients-link:hover,
+.clients-link:focus {
+  border: 1px solid var(--primary-accent-color);
+}
+.clients-link:hover .icon-clients,
+.clients-link:focus .icon-clients {
+  fill: var(--primary-accent-color);
+}
+.icon-clients {
+  fill: #afb1b8;
+}
+/* =========end clients section======== */
 /* =======start footer section====== */
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
 
   background-color: var(--footer-and-header-bg-color);
+}
+.footer-box {
+  display: flex;
+  align-items: baseline;
+}
+.right-footer {
+  margin-left: 70px;
+  min-width: 206px;
 }
 .logo-footer {
   display: inline-block;
@@ -317,6 +406,23 @@ body {
 }
 .footer-contacts-item:not(:last-child) {
   margin-bottom: 9px;
+}
+.social-footer-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon-footer-social {
+  fill: var(--secondary-accent-color);
+}
+.title-links {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--secondary-accent-color);
 }
 /* ========PORTFOLIO PAGE======= */
 .portfolio-section {
@@ -362,7 +468,6 @@ body {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .products-list-item {
-  /* flex-basis: calc((100% - 90px) / 3); */
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
