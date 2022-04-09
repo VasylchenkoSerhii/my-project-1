@@ -384,13 +384,54 @@
     </div>
 </footer>
 
-<div class="backdrop is-hidden" data-modal>
+<div class="backdrop" data-modal>
     <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
             <svg class="modal-close-icon" width="11" height="11">
                 <use href="./images/sprite.svg#icon-close"></use>
             </svg>   
         </button>
+        <form class="contact-form">
+            <b class="contact-form-title">Оставьте свои данные, мы вам перезвоним</b>
+            <label class="contact-form-fieled" for="name">Имя</label>
+            <div class="contact-form-input-wrapper">
+                <input name="user_name" class="contact-form-input" type="text" id="name">
+                <svg class="contact-form-icon" width="12" height="12">
+                    <use href="./images/sprite.svg#icon-portrait"></use>
+                </svg>
+            </div>
+            
+            <label class="contact-form-fieled" for="phone">Телефон</label>
+            <div class="contact-form-input-wrapper">
+                <input name="user_phone" class="contact-form-input" type="tel" id="phone">
+                <svg class="contact-form-icon"  width="13" height="13">
+                    <use href="./images/sprite.svg#icon-phone"></use>
+                </svg>
+            </div>
+
+            <label class="contact-form-fieled" for="email">Почта</label>
+            <div class="contact-form-input-wrapper">
+                <input name="user_email" class="contact-form-input" type="email" id="email">
+                <svg class="contact-form-icon" width="15" height="12">
+                    <use href="./images/sprite.svg#icon-envelope-form"></use>
+                </svg>
+            </div>
+
+            <label class="contact-form-fieled" for="message">Комментарий</label>
+            <textarea name="user_message" class="contact-form-message" id="message" placeholder="Введите текст"></textarea>  
+
+            <div class="contact-form-checkbox-wrapper">
+                <input name="accept-policy" class="contact-form-checkbox" type="checkbox" id="policy-checkbox" required>
+                <label class="contact-form-checkbox-label" for="policy-checkbox">
+                    <span class="contact-checkbox-icon-wrapper">
+                        <svg class="contact-form-checkbox-icon" width="11" height="8">
+                            <use href="./images/sprite.svg#icon-mark"></use>
+                        </svg>
+                    </span>Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
+            </div>
+            
+            <button type="submit" class="contact-form-sumbit-btn">Отправить</button>
+        </form>
     </div>
 </div>
 <script src="./JS/modal.js"></script>
