@@ -349,7 +349,7 @@
             </address>
         </div>
         <div class="right-footer">
-            <p class="title-links">Присоединяйтесь</p>
+            <p class="footer-title">Присоединяйтесь</p>
             <ul class="social-footer-list list">
                 <li class="social-footer-item">
                     <a class="social-team-link social-footer link" href=""  aria-label="instagram">
@@ -381,10 +381,19 @@
                 </li>
             </ul>
         </div>
+        <form class="subscrid-form">
+            <b class="footer-title">Подпишитесь на рассылку</b>
+            <input name="user_email" type="email" class="subscrid-form-input" placeholder="E-mail">
+            <buttom type="submit" class="modal-btn subscrid-btn">Подписаться
+                <svg class="subscrid-icon-btn" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-send"></use>
+                </svg>
+            </buttom>
+        </form>
     </div>
 </footer>
 
-<div class="backdrop" data-modal>
+<div class="backdrop is-hidden" data-modal>
     <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
             <svg class="modal-close-icon" width="11" height="11">
@@ -421,16 +430,19 @@
             <textarea name="user_message" class="contact-form-message" id="message" placeholder="Введите текст"></textarea>  
 
             <div class="contact-form-checkbox-wrapper">
-                <input name="accept-policy" class="contact-form-checkbox" type="checkbox" id="policy-checkbox" required>
+                <input name="accept-policy" class="contact-form-checkbox" type="checkbox" id="policy-checkbox">
                 <label class="contact-form-checkbox-label" for="policy-checkbox">
                     <span class="contact-checkbox-icon-wrapper">
                         <svg class="contact-form-checkbox-icon" width="11" height="8">
                             <use href="./images/sprite.svg#icon-mark"></use>
                         </svg>
-                    </span>Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
+                    </span>
+                    <svg class="contact-form-checkbox-icon-first" width="16" height="15">
+                        <use href="./images/sprite.svg#icon-square"></use>
+                    </svg>Соглашаюсь с рассылкой и принимаю &nbsp; <a href="">Условия договора</a></label>
             </div>
             
-            <button type="submit" class="contact-form-sumbit-btn">Отправить</button>
+            <button type="submit" class="modal-btn sumbit-btn">Отправить</button>
         </form>
     </div>
 </div>

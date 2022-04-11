@@ -463,7 +463,7 @@ body {
 .icon-footer-social {
   fill: var(--secondary-accent-color);
 }
-.title-links {
+.footer-title {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -471,6 +471,37 @@ body {
   text-transform: uppercase;
 
   color: var(--secondary-accent-color);
+}
+.subscrid-form {
+  margin-left: auto;
+}
+.subscrid-form-input {
+  width: 358px;
+  height: 50px;
+  padding: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  
+  color: var(--secondary-bg-color);
+  background-color: var(--footer-and-header-bg-color);
+}
+.subscrid-form-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscrid-form-input:focus {
+  outline: none;
+}
+.subscrid-btn {
+  margin-left: 12px;
+}
+.subscrid-icon-btn {
+  fill: var(--secondary-accent-color);
 }
 /* =========end footer section=========*/
 /* ==========start modal window======== */
@@ -498,6 +529,10 @@ body {
   padding: 40px;
   width: 528px;
   height: 580px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   background-color: rgba(255, 255, 255, 1);
 }
 .modal-close-btn {
@@ -517,6 +552,7 @@ body {
 .contact-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .contact-form-title {
   margin-bottom: 12px;
@@ -530,10 +566,15 @@ body {
 }
 .contact-form-fieled {
   margin-bottom: 4px;
+  width: 100%;
+  
+  font-size: 12px;
+  line-height: 1.16;
 }
 .contact-form-input-wrapper {
   position: relative;
   margin-bottom: 10px;
+  width: 100%;
 }
 .contact-form-icon {
   position: absolute;
@@ -544,7 +585,7 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form-input {
-  padding-left: 42px;
+  padding: 0px 0px 0px 42px;
   height: 40px;
   width: 100%;
 
@@ -555,10 +596,10 @@ body {
 }
 .contact-form-input:focus {
   outline: none;
-  border-color: var(--accent-contact-form-color);
+  border-color: var(--primary-accent-color);
 }
 .contact-form-input:focus + .contact-form-icon {
-  fill: var(--accent-contact-form-color);
+  fill: var(--primary-accent-color);
 }
 .contact-form-message {
   width: 100%;
@@ -574,7 +615,7 @@ body {
 }
 .contact-form-message:focus {
   outline: none;
-  border-color: var(--accent-contact-form-color);
+  border-color: var(--primary-accent-color);
 }
 .contact-form-message::placeholder {
   font-size: 12px;
@@ -587,14 +628,64 @@ body {
   margin-bottom: 30px;
 }
 .contact-form-checkbox-label{
+  position: relative;
+  display: flex;
+  align-items: center;
   font-size: 14px;
   line-height: 1.7;
 
   color: var(--primary-text-color);
 }
 .contact-form-checkbox-label a {
-  color: var(--accent-contact-form-color);
+  color: var(--primary-accent-color);
 }
+.contact-checkbox-icon-wrapper {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 15px;
+  opacity: 0;
+  border-radius: 3px;
+  background-color: var(--primary-accent-color);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-form-checkbox-icon-first {
+  margin-right: 8px;
+  cursor: pointer;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-form-checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  fill: #ffffff;
+}
+.contact-form-checkbox:checked + .contact-form-checkbox-label > .contact-checkbox-icon-wrapper {
+  opacity: 1; 
+}
+.contact-form-checkbox:checked + .contact-form-checkbox-label > .contact-form-checkbox-icon-first {
+  opacity: 0;
+}
+.contact-form-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.modal-btn.sumbit-btn {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
 /* ===========end modal window========== */
 /* ========PORTFOLIO PAGE======= */
 .portfolio-section {
