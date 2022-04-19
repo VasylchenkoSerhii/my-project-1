@@ -20,19 +20,17 @@
     border-radius: 4px;
 
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients-list__link:hover,
-.clients-list__link:focus {
-    border: 1px solid var(--primary-accent-color);
-}
-
-.clients-list__link:hover .clients-list__icon,
-.clients-list__link:focus .clients-list__icon {
-    fill: var(--primary-accent-color);
+    &:hover,
+    &:focus {
+        border: 1px solid var(--primary-accent-color);
+    }
 }
 
 .clients-list__icon {
     fill: #afb1b8;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .clients-list__link:hover &,
+    .clients-list__link:focus & {
+        fill: var(--primary-accent-color);
+    }
 }

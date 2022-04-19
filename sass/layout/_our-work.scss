@@ -7,16 +7,14 @@
     flex-wrap: wrap;
 }
 
-.work-list__item:not(:nth-child(3n)) {
-    margin-right: 30px;
-}
-
-.work-list__item:not(:nth-last-child(-n + 3)) {
-    margin-bottom: 30px;
-}
-
 .work-list__item {
     position: relative;
+    &:not(:nth-child(3n)) {
+        margin-right: 30px;
+    }
+    &:not(:nth-last-child(-n + 3)) {
+        margin-bottom: 30px;
+    }
 }
 
 .work-list__wrapper {
