@@ -22,7 +22,7 @@
   @media screen and (max-width: 767px) {
     .header {
         position: relative;
-        padding-top: 26px;
+        padding-top: 16px;
         padding-bottom: 16px;
     }  
     .nav__list {
@@ -49,7 +49,6 @@
         left: 0px;
         width: 100%;
         height: 100vh;
-        padding-top: 26px;
         overflow: auto;
         background-color: #ffffff;
         opacity: 0;
@@ -64,7 +63,7 @@
     }
     .mobile-menu__close-btn {
         position: absolute;
-        top: 10px;
+        top: 21px;
         right: 15px;
         cursor: pointer;
         background-color: transparent;
@@ -81,6 +80,7 @@
         position: relative;
         padding-top: 48px;
         padding-bottom: 48px;
+        padding-left: 40px;
     }
     .mobile-nav {
         margin-bottom: 302px;
