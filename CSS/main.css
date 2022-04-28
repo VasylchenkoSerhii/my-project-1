@@ -78,6 +78,8 @@ body {
 }
 
 .container {
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -85,8 +87,6 @@ body {
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -196,10 +196,12 @@ body {
 
 .backdrop {
   position: fixed;
+  padding: 94px 15px;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -211,16 +213,29 @@ body {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   padding: 40px;
-  width: 528px;
-  height: 580px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: white;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 580px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 .modal-close-btn {
@@ -236,6 +251,11 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
   cursor: pointer;
+  transition: fill 25ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover, .modal-close-btn:focus {
+  fill: var(--primary-accent-color);
 }
 
 .contact-form {
@@ -328,6 +348,13 @@ body {
   color: var(--primary-text-color);
 }
 
+@media screen and (max-width: 1199px) {
+  .contact-form__checkbox-label {
+    font-size: 11px;
+    line-height: 1.16;
+  }
+}
+
 .contact-form__checkbox-link {
   color: var(--primary-accent-color);
 }
@@ -394,7 +421,7 @@ body {
 }
 
 @media screen and (max-width: 1199px) {
-  .contacts__item {
+  .contacts__item:not(:last-child) {
     margin-bottom: 10px;
   }
   .contacts__icon {
@@ -466,7 +493,6 @@ body {
     position: relative;
     padding-top: 48px;
     padding-bottom: 48px;
-    padding-left: 40px;
   }
   .mobile-nav {
     margin-bottom: 302px;
@@ -550,6 +576,7 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--secondary-text-color);
   }
   .nav__link:hover, .nav__link:focus {
@@ -634,7 +661,7 @@ body {
 }
 
 .hero__title {
-  width: 360px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -679,7 +706,7 @@ body {
     padding-bottom: 200px;
   }
   .hero__title {
-    width: 696px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.4;
   }
@@ -694,6 +721,10 @@ body {
   margin-bottom: 30px;
   background-color: var(--secondary-bg-color);
   border-radius: 4px;
+}
+
+.features__item {
+  width: 100%;
 }
 
 .features__title {
