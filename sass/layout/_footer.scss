@@ -3,21 +3,62 @@
     padding-bottom: 60px;
     background-color: var(--footer-and-header-bg-color);
 }
-
 .footer__container {
+    position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
     align-items: baseline;
+    } 
+}
+
+@media screen and (max-width: 1199px) {
+    .left-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+    .address__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
+@media screen and (min-width: 678px) and (max-width: 1199px) {
+    .left-footer {
+        margin-left: 78px;
+    }
+    .centr-footer {
+        position: absolute;
+        top: 5px;
+        right: 89px;
+    }
 }
 
 .centr-footer {
-    margin-left: 70px;
     min-width: 206px;
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+    }  
 }
 
 .footer__logo {
     display: inline-block;
     margin-bottom: 20px;
     color: var(--secondary-accent-color);
+    @media screen and (max-width: 1199px) {
+        font-size: 24px;
+        line-height: 1.16;
+    }
 }
 
 .address__link {
@@ -50,17 +91,30 @@
 }
 
 .subscrib-form {
-    margin-left: auto;
+    @media screen and (max-width: 1199px) {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: auto;
+    }
 }
 
 .subscrib-form__wripper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 1200px) {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    } 
 }
 
 .subscrib-form__input {
-    width: 358px;
+    width: 450px;
     height: 50px;
     padding: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -76,6 +130,14 @@
         font-size: 16px;
         line-height: 1.25;
         color: rgba(255, 255, 255, 0.6);
+    }
+
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+    width: 358px;
     }
 }
 
