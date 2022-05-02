@@ -25,9 +25,14 @@
             <ul class="nav__list list">
                 <li class="nav__item"><a class="nav__link link" href="./index.html">Студия</a></li>
                 <li class="nav__item"><a class="nav__link nav__link--current link" href="./portfolio.html">Портфолио</a></li>
-                <li class="nav__item"><a class="nav__link link" href="./train.html">Контакты</a></li>
+                <li class="nav__item"><a class="nav__link link" href="">Контакты</a></li>
             </ul>
         </nav>
+        <button type="button" class="mobile-menu-btn" aria-label="кнопка мобильного меню" data-menu-open>
+            <svg class="mobile-menu-btn__icon" width="40" height="40">
+                <use href="./images/sprite.svg#icon-burger-menu"></use>
+            </svg>
+        </button>
         <ul class="contacts list">
             <li class="contacts__item">
                 <a class="contacts__link link" href="mailto:info@devstudio.com">
@@ -39,13 +44,70 @@
             </li>
             <li class="contacts__item">
                 <a class="contacts__link link" href="tel:+380961111111">
-                    <svg class="contacts__icon" width="10" height="16">
+                    <svg class="contacts__icon contacts__icon--phone" width="10" height="16">
                         <use href="./images/sprite.svg#icon-smartphone"></use>
                     </svg>
                     +38 096 111 11 11
                 </a>
             </li>
         </ul>
+    </div>
+    <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+            <button type="button" class="mobile-menu__close-btn" aria-label="закрывающая кнопка мобильного меню"
+                data-menu-close>
+                <svg class="mobile-menu__close-icon" width="19" height="19">
+                    <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list list">
+                    <li class="mobile-nav__item">
+                        <a href="./index.html" class="mobile-nav__link mobile-nav__link--current link">Студия</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="" class="mobile-nav__link link">Портфолио</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a href="" class="mobile-nav__link link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="mobile-contacts list">
+                <li class="mobile-contacts__item">
+                    <a href="tel:+380961111111" class="mobile-contacts__link mobile-contacts__link--accent link">
+                        +38 096 111 11 11
+                    </a>
+                </li>
+                <li class="mobile-contacts__item">
+                    <a href="mailto:info@devstudio.com" class="mobile-contacts__link link">
+                        info@devstudio.com
+                    </a>
+                </li>
+            </ul>
+            <ul class="mobile-social-links list">
+                <li class="mobile-social-links__item">
+                    <a href="" class="mobile-social-links__link link">
+                        Instagram
+                    </a>
+                </li>
+                <li class="mobile-social-links__item">
+                    <a href="" class="mobile-social-links__link link">
+                        Twitter
+                    </a>
+                </li>
+                <li class="mobile-social-links__item">
+                    <a href="" class="mobile-social-links__link link">
+                        Facebook
+                    </a>
+                </li>
+                <li class="mobile-social-links__item">
+                    <a href="" class="mobile-social-links__link link">
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </header>
     <main>
@@ -74,7 +136,28 @@
             <li class="grid__item">
                 <a class="product link" href="">
                     <div class="product__img">
-                        <img src="./images/img-portfolio-1.jpg" alt="ноутбук с фотографиями на экране" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-w-img.webp 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-w-img.webp 2x" type="image/webp"/>
+                                                    
+                            <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-w-img.webp 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-w-img.webp 2x" type="image/webp"/>
+                                                    
+                            <source media="(min-width: 320px)"
+                            srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-w-img.webp 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-w-img@2x.webp 2x" type="image/webp"/>
+                                                    
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-img.jpg 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-img@2x.jpg 2x" />
+                                                    
+                            <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-img.jpg 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-img@2x.jpg 2x" />
+                                                    
+                            <source media="(min-width: 320px)"
+                            srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-img.jpg 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-img@2x.jpg 2x" />
+
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile-img.jpg" alt="ноутбук с фотографиями на экране">
+                        </picture>
+                        
                         <p class="product__overlay">
                             Технокряк это современная площадка распространения коронавируса. 
                             Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов. 
@@ -89,7 +172,27 @@
             <li class="grid__item">
                 <a class="product link" href="">
                     <div class="product__img">
-                        <img src="./images/img-portfolio-2.jpg" alt="баскетболисты" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-1.webp 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-1.webp 2x" type="image/webp"/>
+                                    
+                            <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-1.webp 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-1.webp 2x" type="image/webp"/>
+                                    
+                            <source media="(min-width: 320px)"
+                            srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-w-img-1.webp 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-w-img@2x-1.webp 2x" type="image/webp"/>
+                                    
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-img-1.jpg 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-img@2x-1.jpg 2x" />
+                                    
+                            <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-img-1.jpg 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-img@2x-1.jpg 2x" />
+                                    
+                            <source media="(min-width: 320px)"
+                            srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-img-1.jpg 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-img@2x-1.jpg 2x" />
+
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile-img-1.jpg" alt="баскетболисты">
+                        </picture>
                         <p class="product__overlay">
                             Технокряк это современная площадка распространения коронавируса. 
                             Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
@@ -104,7 +207,28 @@
             <li class="grid__item">
                 <a class="product link" href="">
                     <div class="product__img">
-                        <img src="./images/img-portfolio-3.jpg" alt="эмблема ресторна" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-2.webp 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-2.webp 2x" type="image/webp"/>
+                                                        
+                            <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-2.webp 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-2.webp 2x" type="image/webp"/>
+                                                        
+                            <source media="(min-width: 320px)"
+                            srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-w-img-2.webp 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-w-img@2x-2.webp 2x" type="image/webp"/>
+                                                        
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-img-2.jpg 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-img@2x-2.jpg 2x" />
+                                                        
+                            <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-img-2.jpg 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-img@2x-2.jpg 2x" />
+                                                        
+                            <source media="(min-width: 320px)"
+                            srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-img-2.jpg 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-img@2x-2.jpg 2x" />
+
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile-img-2.jpg" alt="эмблема ресторна">
+                        </picture>
+                        
                         <p class="product__overlay">
                             Технокряк это современная площадка распространения коронавируса. 
                             Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
@@ -119,7 +243,27 @@
             <li class="grid__item">
                 <a class="product link" href="">
                     <div class="product__img">
-                        <img src="./images/img-portfolio-4.jpg" alt="наушники" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-3.webp 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-3.webp 2x" type="image/webp"/>
+                                            
+                            <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-3.webp 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-3.webp 2x" type="image/webp"/>
+                                            
+                            <source media="(min-width: 320px)"
+                            srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-w-img-3.webp 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-w-img@2x-3.webp 2x" type="image/webp"/>
+                                            
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-img-3.jpg 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-img@2x-3.jpg 2x" />
+                                            
+                            <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-img-3.jpg 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-img@2x-3.jpg 2x" />
+                                            
+                            <source media="(min-width: 320px)"
+                            srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-img-3.jpg 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-img@2x-3.jpg 2x" />
+
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile-img-3.jpg" alt="наушники">
+                        </picture>
                         <p class="product__overlay">
                             Технокряк это современная площадка распространения коронавируса. 
                             Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
@@ -134,7 +278,28 @@
             <li class="grid__item">
                 <a class="product link" href="">
                     <div class="product__img">
-                        <img src="./images/img-portfolio-5.jpg" alt="две коробки" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-4.webp 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-4.webp 2x" type="image/webp"/>
+                                            
+                            <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-4.webp 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-4.webp 2x" type="image/webp"/>
+                                            
+                            <source media="(min-width: 320px)"
+                            srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-w-img-4.webp 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-w-img@2x-4.webp 2x" type="image/webp"/>
+                                            
+                            <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-img-4.jpg 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-img@2x-4.jpg 2x" />
+                                            
+                            <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-img-4.jpg 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-img@2x-4.jpg 2x" />
+                                            
+                            <source media="(min-width: 320px)"
+                            srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-img-4.jpg 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-img@2x-4.jpg 2x" />
+
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile-img-4.jpg" alt="две коробки">
+                        </picture>
+                        
                         <p class="product__overlay">
                             Технокряк это современная площадка распространения коронавируса. 
                             Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
@@ -149,7 +314,28 @@
             <li class="grid__item">
                 <a class="product link" href="">
                     <div class="product__img">
-                        <img src="./images/img-portfolio-6.jpg" alt="монитор" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-5.webp 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-5.webp 2x" type="image/webp"/>
+                            
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-5.webp 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-5.webp 2x" type="image/webp"/>
+                            
+                            <source media="(min-width: 320px)"
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-w-img-5.webp 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-w-img@2x-5.webp 2x" type="image/webp"/>
+                            
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-img-5.jpg 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-img@2x-5.jpg 2x" />
+                            
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-img-5.jpg 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-img@2x-5.jpg 2x" />
+                            
+                            <source media="(min-width: 320px)"
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-img-5.jpg 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-img@2x-5.jpg 2x" />
+
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile-img-5.jpg" alt="монитор">
+                        </picture>
+                        
                         <p class="product__overlay">
                             Технокряк это современная площадка распространения коронавируса. 
                             Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
@@ -164,7 +350,28 @@
             <li class="grid__item">
                 <a class="product link" href="">
                     <div class="product__img">
-                        <img src="./images/img-portfolio-7.jpg" alt="открытая книга" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-6.webp 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-6.webp 2x" type="image/webp"/>
+                            
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-6.webp 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-6.webp 2x" type="image/webp"/>
+                            
+                            <source media="(min-width: 320px)"
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-w-img-6.webp 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-w-img@2x-6.webp 2x" type="image/webp"/>
+                            
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-img-6.jpg 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-img@2x-6.jpg 2x" />
+                            
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-img-6.jpg 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-img@2x-6.jpg 2x" />
+                            
+                            <source media="(min-width: 320px)"
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-img-6.jpg 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-img@2x-6.jpg 2x" />
+
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile-img-6.jpg" alt="открытая книга">
+                        </picture>
+                        
                         <p class="product__overlay">
                             Технокряк это современная площадка распространения коронавируса. 
                             Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
@@ -179,7 +386,27 @@
             <li class="grid__item">
                 <a class="product link" href="">
                     <div class="product__img">
-                        <img src="./images/img-portfolio-8.jpg" alt="лейба" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-7.webp 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-7.webp 2x" type="image/webp"/>
+                            
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-7.webp 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-7.webp 2x" type="image/webp"/>
+                            
+                            <source media="(min-width: 320px)"
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-w-img-7.webp 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-w-img@2x-7.webp 2x" type="image/webp"/>
+                            
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-img-7.jpg 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-img@2x-7.jpg 2x" />
+                            
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-img-7.jpg 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-img@2x-7.jpg 2x" />
+                            
+                            <source media="(min-width: 320px)"
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-img-7.jpg 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-img@2x-7.jpg 2x" />
+
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile-img-7.jpg" alt="лейба">
+                        </picture>
                         <p class="product__overlay">
                             Технокряк это современная площадка распространения коронавируса. 
                             Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
@@ -194,7 +421,27 @@
             <li class="grid__item">
                 <a class="product link" href="">
                     <div class="product__img">
-                        <img src="./images/img-portfolio-9.jpg" alt="руки на клавиатуре ноутбука" width="370" height="294">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-8.webp 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-w-img-8.webp 2x" type="image/webp"/>
+                            
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-8.webp 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-w-img-8.webp 2x" type="image/webp"/>
+                            
+                            <source media="(min-width: 320px)"
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-w-img-8.webp 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-w-img@2x-8.webp 2x" type="image/webp"/>
+                            
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-desktop/portfolio-desktop-img-8.jpg 1x, ./images/portfolio/portfolio-desktop/portfolio-desktop-img@2x-8.jpg 2x" />
+                            
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-tablet/portfolio-tablet-img-8.jpg 1x, ./images/portfolio/portfolio-tablet/portfolio-tablet-img@2x-8.jpg 2x" />
+                            
+                            <source media="(min-width: 320px)"
+                                srcset="./images/portfolio/portfolio-mobile/portfolio-mobile-img-8.jpg 1x, ./images/portfolio/portfolio-mobile/portfolio-mobile-img@2x-8.jpg 2x" />
+
+                            <img src="./images/portfolio/portfolio-mobile/portfolio-mobile-img-8.jpg" alt="руки на клавиатуре ноутбука">
+                        </picture>
                         <p class="product__overlay">
                             Технокряк это современная площадка распространения коронавируса. 
                             Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.

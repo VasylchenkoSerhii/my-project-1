@@ -1,16 +1,37 @@
 .portfolio-section {
-    padding-top: 130px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 130px;
+        padding-bottom: 94px;
+    } 
 }
 
 .filters {
     display: flex;
-    justify-content: center;
-    margin-bottom: 34px;
+
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
 }
 
 .filters__item:not(:last-child) {
     margin-right: 8px;
+}
+@media screen and (max-width: 767px) {
+    .filters__item:not(:nth-child(n + 4)) {
+        margin-bottom: 15px;
+    } 
 }
 
 .filter__btn {
@@ -34,16 +55,28 @@
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -30px;
+        margin-top: -30px;
+    } 
 }
 
 .grid__item {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc(100% / 2 - 30px);
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    
+    @media screen and (min-width: 1200px) {
     flex-basis: calc(100% / 3 - 30px);
-    margin-left: 30px;
-    margin-top: 30px;
+    }
 }
 
 .product {
